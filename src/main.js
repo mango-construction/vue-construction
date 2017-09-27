@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
+import 'iview/dist/styles/iview.css'
 import routes from './config/routes'
 import store from './store/'
 import components from './components/' //加载公共组件
+import iView from 'iview';
 
 import './css/common.css'
 import './less/common.less'
@@ -14,7 +15,7 @@ Object.keys(components).forEach((key) => {
 })
 
 Vue.use(VueRouter)
-
+Vue.use(iView);
 const router = new VueRouter({
     routes
 })
